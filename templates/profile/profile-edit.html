@@ -1,0 +1,74 @@
+{% extends 'profile/base.html' %}
+
+{% block title %}
+  <title>Редактировать профиль</title>
+{% endblock %}
+
+{% block content %}
+
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Давай Шагай</a>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="{{ theUser.stepUser.id }}">
+            <i class="fa fa-user"></i>
+            {% if theUser.stepUser.last_name %}
+              {{ theUser.stepUser.last_name }} {{ theUser.stepUser.first_name }}
+            {% else %}
+              {{ theUser.stepUser.username }}
+            {% endif %}</a>
+        </li>
+        <li class="active">
+          <a href="{% url 'profile_edit' %}">
+            <i class="fa fa-pencil-square-o"></i>Редактировать профиль</a>
+        </li>
+        <li>
+          <a href="{% url 'users' %}">
+            <i class="fa fa-users"></i>Пользователи</a>
+        </li>
+        <li>
+          <a href="{% url 'logout' %}">
+            <i class="fa fa-sign-out"></i>Выход</a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+  <div class="container" style='margin-top: 50px;'>
+    <div id="page-wrapper" >
+      <div id="page-inner">
+
+        <div class="row">
+          <h3 align="center">Редактировать профиль</h3>
+          <br>
+          <div class="col-md-4"></div>
+          <div class="col-md-4" style='text-align: center;'>
+            <form action="" method='POST'>
+              <input name="first_name" type="text" class="form-control" placeholder="Имя" maxlength='30'>
+              <br>
+              <input name="last_name" type="text" class="form-control" placeholder="Фамилия" maxlength='30'>
+              <br>
+              <input name="city" type="text" class="form-control" placeholder="Город" maxlength='20'>
+              <br>
+              <input name="age" type="text" class="form-control" placeholder="Возраст" maxlength='3'>
+              <br>
+              <span>Выберите фото</span>
+              <input name="photo" type="file" class="form-control" placeholder="Username">
+              <br>
+              <input name="submit" type="submit" class='btn btn-info' value='Сохранить изменения'>
+            </form>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+
+      </div><!-- /. PAGE INNER  -->
+    </div><!-- /. PAGE WRAPPER  --></div>
+{% endblock %}
