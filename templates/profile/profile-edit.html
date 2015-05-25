@@ -51,7 +51,7 @@
             <br>
             <div class="col-md-4"></div>
             <div class="col-md-4" style='text-align: center;'>
-              <form action="{% url 'profile_edit_form' user.id %}" method='POST'>
+              <form action="{% url 'profile_edit_form' user.id %}" method='POST' enctype="multipart/form-data">
                 {% csrf_token %}
                 <label for="first_name">Имя</label>
                 <input id="first_name" name="first_name" type="text" class="form-control" placeholder="Имя" maxlength='30' value="{{ theUser.stepUser.first_name }}{{ first_name }}">
@@ -76,6 +76,9 @@
                 {% endfor %}
                 <label for="photo">Загрузите фото</label>
                 <input id="photo" name="photo" type="file" class="form-control">
+                {% for error in form.photo.errors %}
+                  <p style="color: #f00;font-size: 12px;">{{ error }}</p>
+                {% endfor %}
                 <br>
                 <input name="submit" type="submit" class='btn btn-info' value='Сохранить изменения'>
               </form>

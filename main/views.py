@@ -117,6 +117,9 @@ def profile_edit_form(request, user_id):
         if f.is_valid():
             StepUsers.objects.filter(stepUser=user_id).update(city=city, age=age)
             User.objects.filter(id=user_id).update(first_name=first_name, last_name=last_name)
+            use = StepUsers.objects.get(stepUser=user_id)
+            use.photo = request.FILES['photo']
+            use.save()
             return redirect('profile', user_id)
         context = {
             'form': f,
