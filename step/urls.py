@@ -23,7 +23,6 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include('main.urls')),
     url(r'^step-api/', include('api.urls')),
-    url(r'^test', 'main.views.testy')
 ]
 
 
