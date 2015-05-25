@@ -11,120 +11,143 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 body{
-	height: 100%;
-	width: 100%;
-	background: url(../img/bg-step.jpg) no-repeat;
-	-webkit-background-size: cover;
-	background-size: cover;
+  height: 100%;
+  width: 100%;
+  background: url(../img/bg-step.jpg) no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 #main{
-	margin-top: 50px;
+  margin-top: 50px;
 }
-	#main h1{
-		text-align: center;
-		font: 60px arial;
-		color: #fff;
-	}
+#main h1{
+  text-align: center;
+  font: 60px arial;
+  color: #fff;
+}
 
-	.landing-tel{
-		margin-top: 100px;
-	}
+.landing-tel{
+  margin-top: 100px;
+}
 
-	.landing-right{
-		padding-left: 50px;
-	}
-		.landing-right h2{
-			font: bold 30px arial;
-			color: #fff;
-			margin-top: 100px;
-		}
+.landing-right{
+  padding-left: 50px;
+}
+.landing-right h2{
+  font: bold 30px arial;
+  color: #fff;
+  margin-top: 100px;
+}
 
-	.download-dev{
-		background: rgba(1,1,1, 0.3);
-		outline: 1px solid #fff;
-		border-radius: 5px;
-		color: #fff;
-		margin-top: 25px;
-		padding-top: 10px;
-		padding-left: 20px;
-		text-align: left;
-		width: 300px;
-		height: 40px;
-		-webkit-transition: all 1.5s;
-		-o-transition: all 1.5s;
-		transition: all 1.5s;
-	}
-		.download-dev:hover{
-			background: #4A6781;
-			color: #fff;
-		}
+.landing-right p{
+  font: bold 20px arial;
+  color: #fff;
+  margin-top: 30px;
+  margin-left: 30px;
+}
 
-		.join-step{
-			margin-top: 30px;
-		}
-			.join-step p{
-				width: 400px;
-				margin-bottom: 30px;
+.landing-right > a{
+  text-decoration: none;
+  display: inline-block;
+  font: 20px arial;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 30px;
+}
+.landing-right .login-btn{
+  border-radius: 10px;
+  outline: none;
+  background: #FB8C00;
 
-			}
-				.join-step p input{
-					height: 50px;
-					border-radius: 5px;
-					text-transform: uppercase;
-					font: 14px arial;
-				}
+  margin-left: 0;
+  padding: 10px 30px;
+}
 
-				.join-step p input[placeholder]{color:#FB8C00;}
+.download-dev{
+  background: rgba(1,1,1, 0.3);
+  outline: 1px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  margin-top: 25px;
+  padding-top: 10px;
+  padding-left: 20px;
+  text-align: left;
+  width: 300px;
+  height: 40px;
+  -webkit-transition: all 1.5s;
+  -o-transition: all 1.5s;
+  transition: all 1.5s;
+}
+.download-dev:hover{
+  background: #4A6781;
+  color: #fff;
+}
 
-				.join-step p input::-webkit-input-placeholder{color:#FB8C00;}
-    			.join-step p input::-moz-placeholder{color:#FB8C00;}/* Firefox 19+ */
-    			.join-step p input:-moz-placeholder{color:#FB8C00;}/* Firefox 18- */
-    			.join-step p input:-ms-input-placeholder{color:#FB8C00;}
+.join-step{
+  margin-top: 30px;
+}
+.join-step p{
+  width: 400px;
+  margin-bottom: 30px;
 
-				input::-webkit-input-placeholder {
-					color:#FB8C00;
-				}
-				input:-moz-placeholder {
-					color:#FB8C00;
-				}
+}
+.join-step p input{
+  height: 50px;
+  border-radius: 5px;
+  font: 14px arial;
+}
 
-				.join-step p input[type='submit']{
-					text-transform: uppercase;
-					color: #fff;
-					border-radius: 10px!important;
-					outline: none;
-					background: #FB8C00;
-					font: 20px arial;
-				}
+.join-step p input[placeholder]{color:#FB8C00;}
+
+.join-step p input::-webkit-input-placeholder{color:#FB8C00;}
+.join-step p input::-moz-placeholder{color:#FB8C00;}/* Firefox 19+ */
+.join-step p input:-moz-placeholder{color:#FB8C00;}/* Firefox 18- */
+.join-step p input:-ms-input-placeholder{color:#FB8C00;}
+
+input::-webkit-input-placeholder {
+  color:#FB8C00;
+}
+input:-moz-placeholder {
+  color:#FB8C00;
+}
+
+.join-step p input[type='submit']{
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 10px!important;
+  outline: none;
+  background: #FB8C00;
+  font: 20px arial;
+}

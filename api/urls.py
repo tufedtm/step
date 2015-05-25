@@ -13,19 +13,15 @@ Including another URLconf
     1. Add an import:  from blog import urls as blog_urls
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
-from django.conf.urls import include, url
-from django.contrib import admin
-from django.conf.urls.static import static
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from step import settings
+from django.conf.urls import url
+
 
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^', include('main.urls')),
-    url(r'^step-api/', include('api.urls')),
-    url(r'^test', 'main.views.testy')
+    url(r'^login$', 'api.views.api_login', name='api_login'),
+    url(r'^registration$', 'api.views.api_reg', name='api_reg'),
+    url(r'^step_update$', 'api.views.step_update', name='step_update'),
+    url(r'^step_info$', 'api.views.api_info', name='api_info'),
+    url(r'^step_info_update$', 'api.views.api_info_update', name='api_info_update'),
+
+    url(r'^history', 'api.views.history', name='history'),
 ]
-
-
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-urlpatterns += staticfiles_urlpatterns()
